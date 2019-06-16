@@ -10,8 +10,8 @@
 }
    div{
                 position:absolute;   //必不可少
-                left:50%;
-                top:50%;
+                left:0%;
+                top:0%;
                 }
 </style>
 <script>
@@ -20,13 +20,14 @@
 		$('#intr')[0].pause();
 		$('#poem')[0].play();
 		$('#poem-txt').fadeIn('slow');
+		
 		 $(function(){
 			             
 			              $("#poem-txt").animate({
-			                top:"+=100px" ,
-			                left:"+=100px"
+			                top:"+=500px" ,
+			                left:"+=500px"
 			            },3000);
-			            
+			          $("#poem-txt").fadeOut('slow');  
 			        })
 		$(clickedObj).animate({
 			width : '10px',
@@ -43,9 +44,9 @@
 		$("#moviebox").fadeOut('slow');
 		
 		$('#poem-txt').animate({
-			bottom : '100px',
-			right : '100px'
-		}, 18000);
+			bottom : '300px',
+			right : '500px'
+		}, 12000);
 		
 		$('#waiting')[0].play();
 	}
@@ -87,7 +88,7 @@ while(rs.next())
 	</span>
 	<audio id="waiting" src="/static/audio/waiting.mp3" preload="auto"></audio>
 	<div id="poem-txt"
-		style="display: none; font-size: 22px; color: orange; position:absolute; left :10px;top:50px" >
+		style="display: none; font-size: 22px; color: orange; position:absolute; z-index: 100;left :10px;top:50px" >
 		
 	${poem11}
 
@@ -100,7 +101,7 @@ while(rs.next())
 	<div id="moviebox" style="margin-top: 100px; display: none"
 		align="center">
 		<video id="movie" height="500px" controls="controls"
-			src="http://vd.yinyuetai.com/sh.yinyuetai.com/uploads/videos/common/74B70168929FF3BC930BAD3647882B83.mp4" onended="onVideoEnd();" />
+			src="https://gss3.baidu.com/6LZ0ej3k1Qd3ote6lo7D0j9wehsv/tieba-smallvideo-transcode/61990981_fd6360c7b3d2674e0b0937c34a4c1b1b_0.mp4" />
 	</div>
 </body>
 </html>
